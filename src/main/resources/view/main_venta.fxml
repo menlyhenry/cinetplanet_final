@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="miContenedor" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.controller.VentaController">
+    <children>
+        <VBox spacing="10.0" styleClass="tarjeta" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+            <children>
+                <Label styleClass="titulo-pagina" text="Registrar venta" />
+                <HBox alignment="BOTTOM_LEFT" spacing="10.0">
+                    <children>
+                        <VBox spacing="3.0" prefWidth="170.0">
+                            <children>
+                                <Label text="DNI/RUC de cliente" />
+                                <TextField fx:id="txtDocBuscar" promptText="8 u 11 dígitos" />
+                            </children>
+                        </VBox>
+                        <Button fx:id="btnBuscarDoc" mnemonicParsing="false" onAction="#buscarCliente" styleClass="btn, btn-primary" text="Buscar" />
+                        <VBox spacing="3.0" prefWidth="300.0">
+                            <children>
+                                <Label text="Nombre / Razón social" />
+                                <TextField fx:id="txtNombreCliente" editable="false" />
+                            </children>
+                        </VBox>
+                        <Button fx:id="btnRegCliente" mnemonicParsing="false" onAction="#registrarCliente" styleClass="btn, btn-success" text="Añadir" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <VBox spacing="3.0" prefWidth="170.0">
+                            <children>
+                                <Label text="Tipo de pago" />
+                                <ComboBox fx:id="cbTipoPago" maxWidth="1.7976931348623157E308" promptText="Seleccione" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="BOTTOM_LEFT" spacing="10.0">
+                    <children>
+                        <VBox spacing="3.0" prefWidth="420.0">
+                            <children>
+                                <Label text="Función" />
+                                <ComboBox fx:id="cbFuncion" maxWidth="1.7976931348623157E308" promptText="Seleccione una función" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="3.0" prefWidth="80.0">
+                            <children>
+                                <Label text="Entradas" />
+                                <TextField fx:id="txtEntradas" />
+                            </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#elegirAsientos" styleClass="btn, btn-primary" text="Elegir asientos" />
+                        <Label fx:id="lblAsientos" text="Ninguno" />
+                    </children>
+                </HBox>
+                <HBox alignment="BOTTOM_LEFT" spacing="10.0">
+                    <children>
+                        <VBox spacing="3.0" prefWidth="300.0">
+                            <children>
+                                <Label text="Producto" />
+                                <ComboBox fx:id="cbProducto" maxWidth="1.7976931348623157E308" promptText="Seleccione un producto" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="3.0" prefWidth="70.0">
+                            <children>
+                                <Label text="Código" />
+                                <TextField fx:id="txtCodigo" editable="false" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="3.0" prefWidth="80.0">
+                            <children>
+                                <Label text="Cantidad" />
+                                <TextField fx:id="txtCantidad" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="3.0" prefWidth="90.0">
+                            <children>
+                                <Label text="P. Unit" />
+                                <TextField fx:id="txtPrecioUnit" editable="false" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="3.0" prefWidth="90.0">
+                            <children>
+                                <Label text="P. Total" />
+                                <TextField fx:id="txtPrecioTotal" editable="false" />
+                            </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#agregarProducto" styleClass="btn, btn-primary" text="Agregar" />
+                    </children>
+                </HBox>
+                <Label fx:id="lblMsg" maxWidth="1.7976931348623157E308" text="" />
+                <TableView fx:id="tablaCarrito" prefHeight="170.0" />
+                <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="resumen">
+                    <children>
+                        <Label text="Entradas:" />
+                        <Label fx:id="lblSubEntradas" text="S/ 0.00" />
+                        <Label text="Productos:" />
+                        <Label fx:id="lblSubProductos" text="S/ 0.00" />
+                        <Label text="Importe sin IGV:" />
+                        <Label fx:id="lblBase" text="S/ 0.00" />
+                        <Label text="IGV (18%):" />
+                        <Label fx:id="lblIgv" text="S/ 0.00" />
+                        <Label style="-fx-font-weight: bold;" text="Importe total:" />
+                        <Label fx:id="lblTotal" styleClass="total-grande" text="S/ 0.00" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#vaciarCarrito" styleClass="btn, btn-warning" text="Vaciar carrito" />
+                        <Button mnemonicParsing="false" onAction="#verTicket" styleClass="btn, btn-info" text="Ver ticket" />
+                        <Button mnemonicParsing="false" onAction="#registrarVenta" styleClass="btn, btn-success" text="Registrar venta" />
+                    </children>
+                </HBox>
+                <Label styleClass="subtitulo" text="Ventas registradas" />
+                <TableView fx:id="tablaVentas" prefHeight="150.0" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

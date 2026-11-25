@@ -1,0 +1,134 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-font-size: 13px;
+    -fx-base: #f4f4f4;
+    -fx-accent: #2a6db0;
+    -fx-focus-color: #2a6db0;
+    -fx-faint-focus-color: transparent;
+}
+
+.cineplanet-root {
+    -fx-background-color: #f4f4f4;
+}
+
+.encabezado {
+    -fx-background-color: #2b3a4a;
+    -fx-padding: 10 15 10 15;
+    -fx-spacing: 12;
+}
+
+.marca-titulo {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.marca-sub {
+    -fx-text-fill: #cfd6dd;
+    -fx-font-size: 11px;
+}
+
+.chip-usuario {
+    -fx-text-fill: white;
+}
+
+.tarjeta {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-padding: 10;
+}
+
+.titulo-pagina {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.texto-suave {
+    -fx-text-fill: #666666;
+    -fx-font-size: 12px;
+}
+
+.resumen {
+    -fx-background-color: #e8e8e8;
+    -fx-padding: 8;
+}
+
+.total-grande {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.error-texto {
+    -fx-text-fill: red;
+}
+
+.btn {
+    -fx-text-fill: white;
+    -fx-background-radius: 3;
+    -fx-padding: 5 12 5 12;
+    -fx-cursor: hand;
+}
+
+.btn-primary, .btn-marca, .btn-info {
+    -fx-background-color: #2a6db0;
+}
+
+.btn-success {
+    -fx-background-color: #3d8b40;
+}
+
+.btn-danger {
+    -fx-background-color: #c0392b;
+}
+
+.btn-warning {
+    -fx-background-color: #d98a1d;
+}
+
+.btn-secundario {
+    -fx-background-color: #888888;
+}
+
+.btn:hover {
+    -fx-opacity: 0.85;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #2a6db0;
+}
+
+.table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+.login-fondo {
+    -fx-background-color: #e9edf1;
+}
+
+.login-form {
+    -fx-background-color: white;
+    -fx-padding: 25 40 25 40;
+}
+
+.login-titulo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.login-sub {
+    -fx-text-fill: #666666;
+}
+
+.login-franja {
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}

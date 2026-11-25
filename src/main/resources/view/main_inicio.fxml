@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysventas.controller.InicioController">
+    <children>
+        <VBox spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label fx:id="lblBienvenida" styleClass="titulo-pagina" text="Hola" />
+                        <Label fx:id="lblFecha" styleClass="texto-suave" text="" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button onAction="#actualizar" styleClass="btn, btn-primary" text="Actualizar" />
+                    </children>
+                </HBox>
+                <HBox spacing="30.0" styleClass="tarjeta">
+                    <children>
+                        <HBox spacing="5.0">
+                            <children>
+                                <Label text="Ventas:" />
+                                <Label fx:id="lblVentas" styleClass="subtitulo" text="0" />
+                            </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <children>
+                                <Label text="Ingresos:" />
+                                <Label fx:id="lblIngresos" styleClass="subtitulo" text="0" />
+                            </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <children>
+                                <Label text="Clientes:" />
+                                <Label fx:id="lblClientes" styleClass="subtitulo" text="0" />
+                            </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <children>
+                                <Label text="Películas:" />
+                                <Label fx:id="lblPeliculas" styleClass="subtitulo" text="0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox spacing="10.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox spacing="5.0" styleClass="tarjeta" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="subtitulo" text="Ventas por tipo de pago" />
+                                <PieChart fx:id="graficoPagos" legendSide="BOTTOM" VBox.vgrow="ALWAYS" />
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0" styleClass="tarjeta" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="subtitulo" text="Últimas ventas" />
+                                <VBox fx:id="listaUltimas" spacing="6.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
